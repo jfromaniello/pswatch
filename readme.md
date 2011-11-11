@@ -16,14 +16,14 @@ A simple example will be:
 
 	Import-Module pswatch
 
-	watch "Myfolder\Other" | {
+	watch "Myfolder\Other" | %{
 		Write-Host "$_.Path has changed!"
 		RunUnitTests.exe $_.Path
 	}
 
 You can filter by using powershell pipelining as follows:
 
-	watch | Get-Item | Where-Object { $_.Extension -eq ".js" } | {
+	watch | Get-Item | Where-Object { $_.Extension -eq ".js" } | %{
 		do the magic...
 	}
 
