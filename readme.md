@@ -34,9 +34,9 @@ Options
 
 The wacth cmdlet has the following parameters:
 
-	-location: the directory to watch. Optional, default to current directory.
-	-includeSubdirectories: default to true.
-	-includeChanged: default to true.
-	-includeRenamed: default to true.
-	-includeCreated: default to true.
-	-includeDeleted: default to false.
+  * location: the directory to watch. Optional, default to current directory.
+  * includeSubdirectories: default to true.
+  * includeChanged: default to true.
+  * includeRenamed: default to true.
+  * includeCreated: default to true.
+  * includeDeleted: default to false.
