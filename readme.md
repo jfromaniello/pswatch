@@ -12,3 +12,10 @@ Usage
 		Write-Host "$_.Path has changed!"
 		RunUnitTests.exe $_.Path
 	}
+
+Installation
+============
+
+Download the psm1 file in My documents\WindowsPowershell\Modules\pswatch or simply run this one line installation script:
+
+	iex ((new-object net.webclient).DownloadString("http://bit.ly/Install-PsWatch"))
