@@ -38,7 +38,7 @@
 	
 #>
 function watch{
-	param ([string]$location = "",
+	param ($location = "",
 		   [switch]$includeSubdirectories = $true,
 		   [switch]$includeChanged = $true,
 		   [switch]$includeRenamed = $true,
@@ -46,11 +46,11 @@ function watch{
 		   [switch]$includeDeleted = $false)
 		   
 	if($location -eq ""){
-		$location = get-location
+		$location = Get-Location
 	}
 	
 	$watcher = New-Object System.IO.FileSystemWatcher
-	$watcher.Path = $location
+	$watcher.Path = Resolve-Path($location)
 	$watcher.IncludeSubdirectories = $includeSubdirectories
 	$watcher.EnableRaisingEvents = $false
 	$watcher.NotifyFilter = [System.IO.NotifyFilters]::LastWrite -bor [System.IO.NotifyFilters]::FileName
