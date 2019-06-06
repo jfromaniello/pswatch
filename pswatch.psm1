@@ -19,7 +19,7 @@
     Import-Module pswatch
 
 	watch "Myfolder\Other" | %{
-		Write-Host "$_.Path has changed!"
+		Write-Host "$($_.Path) has changed!"
 		RunUnitTests.exe $_.Path
 	}
 
