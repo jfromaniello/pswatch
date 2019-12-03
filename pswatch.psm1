@@ -54,6 +54,7 @@ function watch{
 	$watcher.IncludeSubdirectories = $includeSubdirectories
 	$watcher.EnableRaisingEvents = $false
 	$watcher.NotifyFilter = [System.IO.NotifyFilters]::LastWrite -bor [System.IO.NotifyFilters]::FileName
+	$watcher.InternalBufferSize = 61440
 	
 	$conditions = 0
 	if($includeChanged){
